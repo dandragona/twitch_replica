@@ -60,6 +60,21 @@ type Stream struct {
 	Thumbnail_URL string
 }
 
+type StreamResponse struct {
+	UserName string
+	Title    string
+	Game     string
+	Viewers  int64
+	Img      string
+}
+
 type Pagination struct {
 	Cursor string
+}
+
+type GameResponse struct {
+	Name    string
+	Viewers int64
+	Img     string
+	Link    string
 }
