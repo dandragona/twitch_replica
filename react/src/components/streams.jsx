@@ -8,6 +8,8 @@ class Streams extends Component {
      }
     render() {
         this.getStreams()
+        console.log('props', this.props);
+
         return (
             <div>
                 {this.state.streams.map(stream => 
@@ -22,6 +24,7 @@ class Streams extends Component {
     }
 
     getStreams = () => {
+        console.log(this.state.game)
         if (this.state.streams.length !== 0) {
             return 
         }

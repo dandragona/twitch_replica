@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Games from "./components/games"
 import { Link } from 'react-router-dom';
 import Streams from "./components/streams"
@@ -10,9 +10,11 @@ class App extends React.Component {
       return (
       <Router>
       <div>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/directory" component={Games} />
-        <Route path={'/dashboard/:game'} component={Streams}/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/directory" component={Games} />
+          <Route path={'/directory/:game'} component={Streams}/>
+        </Switch>
       </div>
     </Router>)
    }
